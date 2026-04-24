@@ -112,8 +112,7 @@ def get_outgoing_layers(layer):
     Any
         Layer objects that consume the output of ``layer``.
     """
-    for i, node in enumerate(layer._outbound_nodes):
-        yield node.outbound_layer
+    pass
 
 
 def model_to_adj_matrix(model):
@@ -200,10 +199,7 @@ def find_layer_by_name(model, name):
         Matching layer instance, or ``None`` if no layer has the requested
         name.
     """
-    for layer in get_layers(model):
-        if layer.name == name:
-            return layer
-    return None
+    pass
 
 
 def find_input_layers(model, id_to_num_mapping=None, adj_matrix=None):

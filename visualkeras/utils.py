@@ -65,19 +65,19 @@ class RectShape:
 
     @property
     def fill(self):
-        return self._fill
+        pass
 
     @property
     def outline(self):
-        return self._outline
+        pass
 
     @fill.setter
     def fill(self, v):
-        self._fill = get_rgba_tuple(v)
+        pass
 
     @outline.setter
     def outline(self, v):
-        self._outline = get_rgba_tuple(v)
+        pass
 
     def _get_pen_brush(self):
         """Return aggdraw pen and brush objects for the current style."""

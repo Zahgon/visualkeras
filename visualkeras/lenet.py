@@ -661,11 +661,11 @@ class FeatureMapStack:
 
     @property
     def visible_count(self) -> int:
-        return min(self.channels, self.max_visual_channels)
+        pass
 
     @property
     def offset(self) -> int:
-        return (self.visible_count - 1) * self.map_spacing if self.visible_count > 0 else 0
+        pass
 
     def bounds(self) -> Tuple[float, float, float, float]:
         left = self.x - self.offset
@@ -678,16 +678,13 @@ class FeatureMapStack:
         return (self.x, self.y, self.x + self.width, self.y + self.height)
 
     def front_anchor(self) -> Tuple[float, float]:
-        x1, y1, x2, y2 = self.front_rect()
-        return ((x1 + x2) / 2.0, (y1 + y2) / 2.0)
+        pass
 
     def left_mid(self) -> Tuple[float, float]:
-        x1, y1, x2, y2 = self.front_rect()
-        return (x1, (y1 + y2) / 2.0)
+        pass
 
     def right_mid(self) -> Tuple[float, float]:
-        x1, y1, x2, y2 = self.front_rect()
-        return (x2, (y1 + y2) / 2.0)
+        pass
 
     def draw(self, draw: aggdraw.Draw) -> None:
         pen = aggdraw.Pen(get_rgba_tuple(self.outline), self.line_width)
@@ -868,13 +865,11 @@ def _get_multiline_text_size(
 
 
 def _default_top_label(layer: Any, rshape: RenderShape) -> str:
-    return type(layer).__name__
+    pass
 
 
 def _default_bottom_label(layer: Any, rshape: RenderShape) -> str:
-    if rshape.kind == "spatial":
-        return f"{rshape.c_dim}@{rshape.h_dim}×{rshape.w_dim}"
-    return f"{rshape.c_dim}"
+    pass
 
 
 # ---------------------------------------------------------------------------
